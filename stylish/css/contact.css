@@ -1,0 +1,114 @@
+/*** Contact ***/
+
+#contact {
+    width: 100%;
+    background-color:#313538;
+    margin-top: 30px;
+}
+
+.contact-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 23px;
+}
+
+.contact-list ul { 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+
+.contact-list ul li {
+   padding: 5px 10px;
+   color: #ddd;
+}
+
+.contact-list ul li a {
+    font-family: PingFangTC;
+    font-size: .875rem;
+    color: #ddd;
+    display: inline-block;
+} 
+
+.contact-list ul li a:nth-child(odd):hover {
+    color: #fff;
+} 
+
+.contact-list li:nth-child(even) {
+    display: none;
+}
+
+.social-media ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.social-media ul li{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.copyright p {
+    font-family: PingFangTC;
+    font-size: 0.5rem;
+    text-align: left;
+    color: #828282;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 835px) {
+    /*** Contact ***/
+    #contact .wrap {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .contact-information {
+        padding-top: 0px;
+    }
+
+    .contact-list ul {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .contact-list ul li {
+        text-align: center;
+    }
+
+    .contact-list ul li a{
+        font-family: PingFangTC;
+        font-size: 1rem;
+    }
+
+    .contact-list li:nth-child(even) {
+        display: block;
+    }
+
+    .copyright p {
+        font-size: 0.4375rem;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .social-media ul {
+        margin-left: 60px;
+    }
+
+    .social-media ul li{
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+}

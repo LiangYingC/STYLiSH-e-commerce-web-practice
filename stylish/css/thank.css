@@ -1,0 +1,441 @@
+@import './cssreset.css';
+@import './header.css';
+@import './contact.css';
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#thank {
+    margin-top: 125px;
+}
+
+#thank .wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.thank_info {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.thank_info .thank_info_title {
+    padding-top: 60px;
+    border-bottom: 3px solid #555;
+}
+
+.thank_info .thank_info_title div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank_info .thank_info_title h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    height: 33px;
+    color: #3f3a3a;
+}
+
+.thank_info .thank_info_title p {
+    font-size: 1rem;
+    padding: 30px 0;
+    color: #3f3a3a;
+}
+
+.thank_info .circle{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border: 3.5px solid #80cebc;
+    border-radius: 50%;
+}
+
+.thank_info .thank_info_description {
+    font-size: 1rem;
+    padding-top: 10px;    
+    color: #3f3a3a;
+}
+
+.thank_info .thank_info_description p {
+    padding-top: 20px;
+}
+
+.thank_info .thank_info_description .order-number {
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 0.5px solid #999;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* lottery */
+#lottery {
+    margin-top: 15px;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#lottery .wrap {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#lottery .wrap > h2 {
+    display: none;
+}
+
+.lottery_description {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background-color: #efefef;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0.5px rgba(150, 150, 150, 0.35);
+}
+
+.lottery_description h2 {
+    font-size: 1.625rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #80cebc;
+    margin-bottom: 15px;
+}
+
+.lottery_description p {
+    font-size: .875rem;
+    margin-top: 10px;
+    color: #3f3a3a;
+}
+
+.lottery_content > p {
+    font-size: 1.125rem;
+    font-weight: 450;
+    letter-spacing: 0.8px;
+    color: #3f3a3a;
+    margin-bottom: 10px;
+    z-index: 3;
+}
+
+.lottery_content > p > span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: red;
+    z-index: 3;
+}
+
+.lottery_image {
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.pointer a {
+    color: #3f3a3a;
+    box-shadow: inset 0px -8px 0px 0px #80cebc;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+}
+
+.pointer a:hover {
+    box-shadow: inset 0px -3px 0px 0px #80cebc;
+
+}
+
+.pointer a:active {
+    box-shadow: inset 0px -3px 0px 0px #80cebc;
+}
+
+.lottery_image_top {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform:translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    -moz-transform:translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    padding: 20px;
+    z-index: 3;
+}
+
+.lottery_image_top p {
+    font-size: 1.125rem;
+    font-weight: 450;
+    line-height: 22.5px;
+    color: #3f3a3a;
+}
+
+.lottery_image_top p::after {
+    content: '';
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: calc(100% - 10px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 35px;
+    border-color: transparent transparent #f9f9f9;
+}
+
+
+.lottery_image img{ 
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* lottery award alert*/
+#award-alert {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 9;
+    display: none;
+}
+
+.award-alert--active {
+    display: block !important;
+}
+
+#award-alert .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.award-alert__layer{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #e0e0e0;
+    opacity: 0.3;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
+
+.award-alert__content {
+    width: 300px;
+    height: 210px;
+    color: #3f3a3a;
+    background-color: #fff;
+    box-shadow:0 0.5px 8px 0.5px rgba(100, 100, 100, 0.35) ;
+    z-index: 10;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50vh + 200px);
+    left: 50vw;
+    transform:translate(-50%, -50%);
+}
+
+.award-alert__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.award-alert__description {
+    font-size: .875rem;
+    font-weight: 450;
+    letter-spacing: 0.6px;
+    margin: 5px 0;
+}
+
+.award-alert__description a {
+    color: #3f3a3a;
+    box-shadow: inset 0px -7px 0px 0px rgba(0,0,0,0.1);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+}
+
+.award-alert__description a:hover {
+    box-shadow: inset 0px -2px 0px 0px #80cebc;;
+}
+
+.award-alert__description a:active {
+    box-shadow: inset 0px -2px 0px 0px #80cebc;;
+}
+
+
+.award-alert__button {
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 3px solid #80cebc;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    margin-top: 15px;
+}
+
+.award-alert__button:hover {
+    background-color: #80cebc;
+    color: #fff;
+     box-shadow:0 0.5px 6px 0.5px rgba(100, 100, 100, 0.35) ;
+}
+
+.award-alert__button:active {
+    background-color: #629c8f;
+    color: #fff;
+    box-shadow:0 0.5px 6px 0.5px rgba(100, 100, 100, 0.35) ;
+}
+
+@media screen and (min-width: 835px) {
+    #lottery .wrap {
+        width: 85%;
+        box-shadow: 0 0 8px 0.5px rgba(150, 150, 150, 0.3);
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    #lottery .wrap > h2 {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: #3f3a3a;
+        margin: 10px auto;
+    }
+
+    #lottery .wrap > h2 > span {
+        color: red;
+    }
+
+    .lottery_turntable {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .lottery_content {
+        width: 60%;
+    }
+    
+    .lottery_description {
+        padding: 25px 30px;
+    }
+
+    .lottery_description h2 {
+        font-size: 1.875rem;
+        padding-bottom: 10px;
+    }
+
+    .lottery_description p {
+        font-size: 1.125rem;
+    }
+
+    .lottery_content > p {
+        font-size: 1.375rem;
+        letter-spacing: 1px;
+        color: #3f3a3a;
+    }
+
+    .lottery_content > p > span {
+        font-size: 1.5rem;
+    }
+
+    .lottery_image_top {
+        width: 120px;
+        height: 120px;
+    }
+
+    .lottery_image_top p {
+        font-size: 1.625rem;
+        font-weight: 500;
+        line-height: 40px;
+        color: #3f3a3a;
+    }
+
+    .lottery_image_top p::after {
+        content: '';
+        position: absolute;
+        left: calc(50% - 30px);
+        bottom: calc(100% - 10px);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 30px 40px;
+        border-color: transparent transparent #f9f9f9;
+    }
+
+    .lottery_image img{ 
+        max-width: 450px;
+    }
+
+    .award-alert__content {
+        width: 400px;
+        height: 230px;
+    }
+
+    .award-alert__title {
+        font-size: 1.40625rem;
+        margin-bottom: 15px;
+    }
+
+    .award-alert__description {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .award-alert__button {
+        font-size: 1.25rem;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) { 
+    #lottery .wrap {
+        width: 71.5%;
+    }
+
+}
+
+@media screen and (min-width: 1205px) { 
+    #lottery .wrap {
+        width: 65%;
+    }
+
+
+
+}
+
+
+
+

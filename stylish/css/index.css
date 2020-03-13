@@ -1,0 +1,260 @@
+@import './cssreset.css';
+@import './header.css';
+@import './contact.css';
+
+/***** Try to follow mobile first *****/
+/*** Banner ***/
+#banner {
+    height: 185px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 125px;
+}
+
+/* Banner bg */
+.banner__bg {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+.banner__bg__item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner__bg__img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top:0;
+    left:0;
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+.banner__bg__img--visible {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.2;
+        background-color: #fff;
+    } 
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Banner word */
+.banner__bg__words {
+    padding: 30px 0 0 60px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+  }
+
+.banner__bg__words__big {
+    color: #333;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+.banner__bg__words__small {
+    color: #444;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Banner dot */
+
+.banner__dot ul {
+    display: flex;
+    position: absolute;
+    bottom: 18px;
+    left: calc(50% - 22.5px);
+    padding: 1px 0;
+}
+
+.banner__dot ul li {
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    z-index: 10;
+    display: block;
+    padding: 1px 1.5px;
+    cursor: pointer;
+}
+
+.banner__dot--active {
+    background-color: #8b572a !important;
+}
+
+
+/*** Product ***/
+#product {
+    margin-top: 15px;
+    padding: 0 24px;
+}
+
+#product .wrap {
+    display: grid;
+    grid-template-columns: calc(50% - 3px) calc(50% - 3px);
+    column-gap: 6px;
+    row-gap: 25px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product-item__img {
+    margin-bottom: 10px;
+}
+
+.product-item__color ul {
+    display: flex;
+}
+
+.product-item__color ul li {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    text-align: left;
+    box-shadow: 1px 1px 5px 0px rgba(150, 150, 150, 0.3);
+    border-radius: 1px;
+}
+
+.product-item__title {
+    font-family: NotoSansCJKtc;
+    font-size: .75rem;
+    letter-spacing: 2.4px;
+    text-align: left;
+    color: #3f3a3a;
+    display: inline-block;
+    margin: 8px 0;
+    flex-grow: 1;
+}
+
+.product-item__price {
+    font-family: NotoSansCJKtc;
+    font-size: .75rem;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #3f3a3a; 
+    display: block;
+}
+
+#product .product--searchfail {
+    grid-template-columns: auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin: 120px auto; 
+}
+
+
+@media screen and (min-width: 835px) {
+    /*** Banner ***/
+    #banner {
+        height: 500px;
+        margin-top: 110px;
+    }
+
+    /* Banner word */
+    .banner__bg__words {
+        padding: 170px 0 0 230px;
+    }
+
+    .banner__bg__words__big {
+        color: #333;
+        font-size: 24px;
+        line-height: 46px;
+        letter-spacing: 1.5px;
+    }
+
+    .banner__bg__words__small{
+        color: #444;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+    }
+
+
+    /* Banner dot */
+    .banner__dot ul {
+        bottom: 35px;
+        left: calc(50% - 45px);
+        padding: 2px 0;
+    }
+
+    .banner__dot ul li {
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff;
+        border-radius: 100%;
+        margin: 0 10px;
+        padding: 2px 3px;
+    }
+
+
+    /*** Product ***/
+    #product .wrap {
+        display: grid;
+        grid-template-columns: 33.3333% 33.3333% 33.3333%;
+        row-gap: 50px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .product-item {
+        padding: 0 10px;
+    }
+
+
+    .product-item__color ul li {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    .product-item__title {
+        font-size: 1.25rem;
+        letter-spacing: 4px;
+        margin: 10px 0;
+    }
+
+    .product-item__price {
+        font-size: 1.25rem;
+        letter-spacing: 4px;
+        text-align: left;
+    }
+
+    #product .product--searchfail {
+        grid-template-columns: auto;
+        font-size: 30px;
+        line-height: 45px;
+        letter-spacing: 2px;
+        margin: 80px auto; 
+    }
+}
+
+
+
+

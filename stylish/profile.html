@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BK7X90XC8V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BK7X90XC8V');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stylish Profile Page</title>
+    <link rel="stylesheet" href="./css/profile.css">
+    <link href="./css/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="wrap">
+            <div class="header__top">
+                <div class="logo-menu-search-area">
+                    <div class="logo">
+                        <a href="./"><img src="images/logo.png" alt="Stylish logo"></a>
+                    </div>
+                    <div class="menu--web">
+                        <ul>
+                            <a href="./?catalog=women">
+                                <li class="menu__women">女裝</li>
+                            </a>
+                            <li>|</li>
+                            <a href="./?catalog=men">
+                                <li class="menu__men">男裝</li>
+                            </a>
+                            <li>|</li>
+                            <a href="./?catalog=accessories">
+                                <li class="menu__accessories">配件</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="search-bar">
+                        <div class="search-bar__close">X</div>
+                        <input type="text" class="search-bar__input">
+                        <div class="search-bar__icon">
+                            <img src="images/search.png" alt="search icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-member-area">
+                    <div class="cart">
+                        <div class="cart__button">
+                            <a href="./cart.html">
+                                <img src="images/cart.png" alt="shopping cart icon" class="cart__button--web">
+                                <div class="cart__qty"></div>
+                            </a>
+                            <a href="./cart.html">
+                                <img src="images/cart-mobile.png" alt="shopping cart icon" class="cart__button--mobile">
+                                <p>購物車</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dash">|</div>
+                    <div class="member">
+                        <div class="member__button">
+                            <a href="#"><img src="images/member.png" alt="" class="member__button--web"></a>
+                            <a href="#">
+                                <img src="images/member-mobile.png" alt="" class="member__button--mobile">
+                                <p>會員</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__base">
+                <div class="menu--mobile">
+                    <ul>
+                        <a href="./?catalog=women">
+                            <li class="menu__women">女裝</li>
+                        </a>
+                        <li>|</li>
+                        <a href="./?catalog=men">
+                            <li class="menu__men">男裝</li>
+                        </a>
+                        <li>|</li>
+                        <a href="./?catalog=accessories">
+                            <li class="menu__accessories">配件</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile -->
+    <section id="profile">
+        <div class="title">會員中心</div>
+        <div class="wrap">
+            <div class="profile__user-info">
+                <div class="title">會員資訊</div>
+                <div class="user-info-wrap">
+                    <div class="user-info__img">
+                        <img src="" alt="Stylish user photo">
+                    </div>
+                    <div class="user-info__name">
+                        <div class="icon"><i class="far fa-user"></i></div>
+                        <p>User 名</p>
+                    </div>
+                    <div class="user-info__level">
+                        <div class="icon"><i class="fas fa-medal"></i></div>
+                        <p>一般會員</p>
+                    </div>
+                    <div class="user-info__email">
+                        <div class="icon"><i class="fas fa-envelope-square"></i></div>
+                        <p>User 的 email</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile__past-order">
+                <div class="title">過去訂單</div>
+                <div class="subtitle-wrap">
+                    <div class="subtitle__number">
+                        訂單編號
+                    </div>
+                    <div class="subtitle__time">
+                        訂單時間
+                    </div>
+                    <div class="subtitle__total">
+                        訂單金額
+                    </div>
+                </div>
+                <div class="order-wrap"></div>
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="wrap">
+            <div class="contact-information">
+                <div class="contact-list">
+                    <ul>
+                        <li><a href="#">關於 Stylish</a></li>
+                        <li>|</li>
+                        <li><a href="#">服務條款</a></li>
+                        <li>|</li>
+                        <li><a href="#">隱私政策</a> </li>
+                        <li>|</li>
+                        <li><a href="#">聯絡我們</a></li>
+                        <li>|</li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#"><img src="images/line.png" alt="line icon"></a></li>
+                        <li><a href="#"><img src="images/twitter.png" alt="twitter icon"></a></li>
+                        <li><a href="#"><img src="images/facebook.png" alt="facebook icon"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>2018 All rights reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

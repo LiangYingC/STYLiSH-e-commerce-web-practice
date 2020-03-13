@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BK7X90XC8V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BK7X90XC8V');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stylish Cart Page</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="https://js.tappaysdk.com/tpdirect/v5"></script>
+    <script>
+        TPDirect.setupSDK(12348, 'app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF', 'sandbox')
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="wrap">
+            <div class="header__top">
+                <div class="logo-menu-search-area">
+                    <div class="logo">
+                        <a href="./"><img src="images/logo.png" alt="Stylish logo"></a>
+                    </div>
+                    <div class="menu--web">
+                        <ul>
+                            <a href="./?catalog=women">
+                                <li class="menu__women">女裝</li>
+                            </a>
+                            <li>|</li>
+                            <a href="./?catalog=men">
+                                <li class="menu__men">男裝</li>
+                            </a>
+                            <li>|</li>
+                            <a href="./?catalog=accessories">
+                                <li class="menu__accessories">配件</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="search-bar">
+                        <div class="search-bar__close">X</div>
+                        <input type="text" class="search-bar__input">
+                        <div class="search-bar__icon">
+                            <img src="images/search.png" alt="search icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-member-area">
+                    <div class="cart">
+                        <div class="cart__button">
+                            <a href="./cart.html">
+                                <img src="images/cart.png" alt="shopping cart icon" class="cart__button--web">
+                                <div class="cart__qty"></div>
+                            </a>
+                            <a href="./cart.html">
+                                <img src="images/cart-mobile.png" alt="shopping cart icon" class="cart__button--mobile">
+                                <p>購物車</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dash">|</div>
+                    <div class="member">
+                        <div class="member__button">
+                            <a href="#"><img src="images/member.png" alt="" class="member__button--web"></a>
+                            <a href="#">
+                                <img src="images/member-mobile.png" alt="" class="member__button--mobile">
+                                <p>會員</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__base">
+                <div class="menu--mobile">
+                    <ul>
+                        <a href="./?catalog=women">
+                            <li class="menu__women">女裝</li>
+                        </a>
+                        <li>|</li>
+                        <a href="./?catalog=men">
+                            <li class="menu__men">男裝</li>
+                        </a>
+                        <li>|</li>
+                        <a href="./?catalog=accessories">
+                            <li class="menu__accessories">配件</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <section id="cart">
+        <div class="wrap">
+            <!-- cart row title and list -->
+            <div class="cart__content">
+                <div class="cart-title">
+                    <div class="main-title"></div>
+                    <div class="cart-row-title--web">
+                        <p class="row-title__qty">數量</p>
+                        <p class="row-title__price">單價</p>
+                        <p class="row-title__subtotal">小計</p>
+                        <div class="maintain-space--web"></div>
+                    </div>
+                </div>
+                <div class="cart-list"></div>
+            </div>
+
+            <!-- cart deliver country and pay way -->
+            <div class="cart__country-and-pay">
+                <div class="deliver-country">
+                    <p>配送國家</p>
+                    <select name="deliver-country">
+                        <option value="Taiwan">台灣及離島</option>
+                        <option value="China">中國</option>
+                        <option value="Vietnam">越南</option>
+                    </select>
+                </div>
+                <div class="pay-way">
+                    <p>付款方式</p>
+                    <select name="pay-way">
+                        <option value="ConvenienceStore-Cash">宅配信用卡付款</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- cart reminder -->
+            <div class="cart__reminder">
+                <p>＊ 提醒您：</p>
+                <ul>
+                    <li>選擇宅配 - 請填寫正確收件人資訊，避免配送不達。</li>
+                    <li>選擇超商 - 請填寫正確收件人姓名（與證件相同），避免無法領取。</li>
+                </ul>
+            </div>
+
+            <!-- cart order information -->
+            <div class="cart__order-info">
+                <div class="title">收件資料</div>
+                <div class="order-info-item">
+                    <label for="name">收件人姓名</label>
+                    <input type="text" id="name" placeholder="需與證件相同，取件時會核對">
+                    <div class="empty-remider">收件人姓名需填寫正確</div>
+                </div>
+                <div class="order-info-item">
+                    <label for="cellphone">手機號碼</label>
+                    <input type="text" id="cellphone">
+                    <div class="empty-remider">手機號碼需填寫正確</div>
+                </div>
+                <div class="order-info-item">
+                    <label for="email">電子信箱</label>
+                    <input type="text" id="email">
+                    <div class="empty-remider">電子信箱需填寫正確</div>
+                </div>
+                <div class="order-info-item">
+                    <label for="address">收件地址</label>
+                    <input type="text" id="address">
+                    <div class="empty-remider">收件地址需填寫正確</div>
+                </div>
+                <div class="order-info-item">
+                    <label for="time">配送時間</label>
+                    <div class="input-time">
+                        <div class="input-time__morning">
+                            <input type="radio" value="morning" name="deliver-time" id="morning">
+                            <label for="morning" class="time">08:00 - 12:00</label>
+                        </div>
+                        <div class="input-time__afternoon">
+                            <input type="radio" value="afternoon" name="deliver-time" id="afternoon">
+                            <label for="afternoon" class="time">14:00 - 18:00</label>
+                        </div>
+                        <div class="input-time__night">
+                            <input type="radio" value="afternoon" name="deliver-time" id="night">
+                            <label for="night" class="time">19:00 - 21:00</label>
+                        </div>
+                        <div class="input-time__anytime">
+                            <input type="radio" value="anytime" name="deliver-time" id="anytime">
+                            <label for="anytime" class="time">不指定</label>
+                        </div>
+                    </div>
+                    <div class="empty-remider">配送時間尚未選取</div>
+                </div>
+            </div>
+
+            <!--cart TapPay-->
+            <div class="cart__tappay">
+                <div class="title">付款資料</div>
+                <div id="tappay-container">
+                    <div class="tappay-item">
+                        <label for="card-number">信用卡卡號</label>
+                        <div class="input">
+                            <div class="tpfield" id="card-number"></div>
+                        </div>
+                    </div>
+                    <div class="tappay-item">
+                        <label for="card-expiration-date">有效日期</label>
+                        <div class="input">
+                            <div class="tpfield" id="card-expiration-date"></div>
+                        </div>
+                    </div>
+                    <div class="tappay-item">
+                        <label for="card-ccv">安全碼</label>
+                        <div class="input">
+                            <div class="tpfield" id="card-ccv"></div>
+                        </div>
+                    </div>
+                    <div class="empty-remider">信用卡資訊有誤，請再次檢查</div>
+                </div>
+            </div>
+
+
+            <!-- cart total price -->
+            <div class="cart__price">
+                <div class="wrap">
+                    <div class="total-price__product-price">
+                        <p class="title">總金額</p>
+                        <p class="price">
+                            NT.<span>0</span>
+                        </p>
+                    </div>
+                    <div class="total-price__freight">
+                        <p class="title">運費</p>
+                        <p class="price">
+                            NT.<span>60</span>
+                        </p>
+                    </div>
+                    <div class="total-price__result-price">
+                        <p class="title">應付金額</p>
+                        <p class="price">
+                            NT.<span>60</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-confirm-to-pay">
+                <p>確認付款</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="wrap">
+            <div class="contact-information">
+                <div class="contact-list">
+                    <ul>
+                        <li><a href="#">關於 Stylish</a></li>
+                        <li>|</li>
+                        <li><a href="#">服務條款</a></li>
+                        <li>|</li>
+                        <li><a href="#">隱私政策</a> </li>
+                        <li>|</li>
+                        <li><a href="#">聯絡我們</a></li>
+                        <li>|</li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#"><img src="images/line.png" alt="line icon"></a></li>
+                        <li><a href="#"><img src="images/twitter.png" alt="twitter icon"></a></li>
+                        <li><a href="#"><img src="images/facebook.png" alt="facebook icon"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>2018 All rights reserved</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="css-loader">
+        <div class="css-loader-layer"></div>
+        <h1>訂單處理中</h1>
+        <div>
+            <div class="css-loader-dot"></div>
+        </div>
+    </section>
+
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
