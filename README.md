@@ -1,7 +1,7 @@
 # STYLiSH
 STYLiSH is a clothing e-commerce website and my first multi-page website work.
 
-> Website link : https://liangyingc.github.io/STYLiSH-E-Commerce-Web-Practice/stylish/index.html
+> Website link : https://liangyingc.github.io/STYLiSH-e-commerce-web-practice/stylish/index.html
 
 - Users can view product list and product details.
 - Users can choose the color and size of products which they want to buy.
